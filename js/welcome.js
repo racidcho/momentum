@@ -11,6 +11,7 @@ function onLoginBtnClick(event) {
     localStorage.setItem("user", username);
     login.classList.add(HIDDEN_CLASSNAME);
     name1.innerText = `${username}님 환영합니다!`;
+    name1.classList.add("color");
     name1.classList.remove(HIDDEN_CLASSNAME);
     clearBtn.classList.remove("hidden");
 }
@@ -23,7 +24,9 @@ if (savedUsername === null) {
 } else {    
     login.classList.add("hidden");
     name1.classList.remove("hidden");
+    
     name1.innerText = `${savedUsername}님 환영합니다!`;
+    name1.classList.add("color");
     clearBtn.classList.remove("hidden");
 }
 
