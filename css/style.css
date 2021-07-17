@@ -76,8 +76,20 @@ h1 {
 }
 
 @media (max-width: 600px) {
+  img {
+    width: 100vw;
+    height: 78vh;
+  }
   body {
+    background-color: white;
+    width: 100vw;
+    height: 80vh;
+  }
+  #quote {
+    z-index: 2;
+    display: block;
+    position: absolute;
+    top: 70%;
     width: 80vw;
-    height: 50vh;
   }
 }
