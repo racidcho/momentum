@@ -78,10 +78,10 @@ h1 {
 @media (max-width: 600px) {
   #quote {
     z-index: 2;
-    display: block;
+    display: inline-block;
     position: absolute;
+    top: 95%;
+    width: 90vw;
     top: 80%;
-    width: 100vw;
-    overflow: hidden;
   }
 }
