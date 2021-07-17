@@ -7,5 +7,4 @@ const bgImg = document.createElement("img");
 bgImg.src = `img/${todayImg}`;
 
 document.body.appendChild(bgImg);
-
-
+bgImg.classList.add("bgImgIndex");
