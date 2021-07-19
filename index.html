@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <style> 
+        ul,
+        li,
+        button {
+            list-style: none;
+        }
+    </style>
 </head>
 <body>
 
@@ -16,8 +23,11 @@
     
     <h1 id="name" class="hidden"></h1>
     <button id="clearBtn" class="hidden">Log out</button>
-    <h1 id="clock"></h1>
-    
+    <h2 id="clock"></h2>
+    <form id="todo-form">
+        <input type="text" placeholder="할 일을 입력해주세요." required>
+    </form>
+    <ul id="todo-list"></ul>
     <div id="quote">
         <span>
         </span>
@@ -28,6 +38,7 @@
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
     
 </body>
 </html>

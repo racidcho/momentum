@@ -14,10 +14,11 @@ function onLoginBtnClick(event) {
     name1.classList.add("color");
     name1.classList.remove(HIDDEN_CLASSNAME);
     clearBtn.classList.remove("hidden");
+    loginform.value = "";
 }
 
 const savedUsername = localStorage.getItem("user");
-console.log(savedUsername);
+
 if (savedUsername === null) {
     login.classList.remove("hidden");
     login.addEventListener("submit" , onLoginBtnClick);
