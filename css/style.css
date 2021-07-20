@@ -125,6 +125,11 @@ h1 {
 #todo-form {
   z-index: 2;
 }
+#weather {
+  z-index: 2;
+  position: absolute;
+  top: 300px;
+}
 @media (max-width: 600px) {
   #quote {
     z-index: 2;
