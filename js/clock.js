@@ -8,4 +8,4 @@ function clocks() {
     clock.innerText = `${hours}:${min}:${sec}`;
 }
 clocks();
-setInterval(clocks, 1000);
+setInterval(clocks, 1000)

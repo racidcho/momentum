@@ -33,7 +33,7 @@ if (savedUsername === null) {
 
 clearBtn.addEventListener("click" , clearBtnClick);
 
-function clearBtnClick() {
+function clearBtnClick(event) {
     event.preventDefault();
     localStorage.clear();
     login.classList.remove("hidden");
@@ -41,4 +41,6 @@ function clearBtnClick() {
     clearBtn.classList.add("hidden");
     login.addEventListener("submit" , onLoginBtnClick);
     loginform.innerText = "";
+    window.location.reload();
+    
 }

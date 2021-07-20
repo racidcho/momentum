@@ -1,5 +1,4 @@
 body {
-  background-color: rgb(15, 32, 32);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,11 +18,18 @@ body {
   z-index: 2;
   border-radius: 10px;
   font-size: 20px;
-  background-color: whitesmoke;
 }
 #login-form {
+  padding-top: 25px;
   z-index: 2;
 }
+
+#login-form input:first-child {
+  border: none;
+
+  height: 25px;
+}
+
 form input:last-child {
   display: inline-block;
 
@@ -37,32 +43,33 @@ form input:first-child {
 
 #clock {
   z-index: 2;
-  padding-bottom: -345;
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 115px;
   color: whitesmoke;
-  background-color: wheat;
+
   font-size: 6em;
 }
 #quote {
   z-index: 2;
   display: inline-block;
   position: absolute;
-  top: 92%;
-  width: 90vw;
+  top: 87%;
+  width: 850px;
 }
 .color {
-  background-color: rgb(36, 36, 36);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 #quote span:first-child {
   z-index: 2;
   font-size: 25px;
-  font-weight: 700;
-  color: tomato;
-  background-color: turquoise;
+
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 #quote span:last-child {
   z-index: 2;
-  background-color: turquoise;
+  /* //background-color: turquoise; */
   font-size: 20px;
 }
 img {
@@ -78,6 +85,19 @@ h1 {
 
 #todo-list {
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+#todo-list span {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: 900;
+  padding-right: 25px;
 }
 #todo-form {
   z-index: 2;
