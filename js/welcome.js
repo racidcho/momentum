@@ -42,5 +42,4 @@ function clearBtnClick(event) {
     login.addEventListener("submit" , onLoginBtnClick);
     loginform.innerText = "";
     window.location.reload();
-    
 }

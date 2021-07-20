@@ -10,7 +10,6 @@ body {
 }
 .hidden {
   z-index: 2;
-
   display: none;
 }
 #clearBtn {
@@ -20,19 +19,20 @@ body {
   font-size: 20px;
 }
 #login-form {
+  border-radius: 25px;
   padding-top: 25px;
   z-index: 2;
 }
 
 #login-form input:first-child {
   border: none;
-
   height: 25px;
+  border-radius: 15px;
+  text-align: center;
 }
 
 form input:last-child {
   display: inline-block;
-
   height: 25px;
   margin-left: 5px;
 }
@@ -42,9 +42,11 @@ form input:first-child {
 }
 
 #clock {
+  border-radius: 25px;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.1);
-  height: 115px;
+  padding: 0px 5px 25px 0px;
+  height: 105px;
   color: whitesmoke;
 
   font-size: 6em;
@@ -61,8 +63,7 @@ form input:first-child {
 }
 #quote span:first-child {
   z-index: 2;
-  font-size: 25px;
-
+  font-size: 17px;
   color: white;
   background-color: rgba(0, 0, 0, 0.4);
 }
@@ -70,7 +71,7 @@ form input:first-child {
 #quote span:last-child {
   z-index: 2;
   /* //background-color: turquoise; */
-  font-size: 20px;
+  font-size: 13px;
 }
 img {
   width: 100vw;
@@ -81,24 +82,46 @@ img {
 
 h1 {
   z-index: 2;
+  border-radius: 10px;
+  padding: 4px;
 }
 
 #todo-list {
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
+  margin: 0px;
+  padding: 0px;
 }
-
+#todo-list li {
+  width: 500px;
+  padding: 3px;
+}
 #todo-list span {
+  border-radius: 10px;
+  display: inline-block;
+  width: 450px;
   font-size: 20px;
   color: rgba(0, 0, 0, 0.9);
   font-weight: 900;
-  padding-right: 25px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-bottom: 5px;
+  margin-right: 10px;
 }
+#todo-form input {
+  border-radius: 15px;
+  border: none;
+  height: 30px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+::placeholder {
+  cololr: blue;
+}
+#login-form input:focus-visible,
+#todo-form input:focus-visible {
+  outline: 1px solid #f7e600;
+}
+
 #todo-form {
   z-index: 2;
 }

@@ -2,6 +2,7 @@ const todoForm = document.getElementById("todo-form");
 const todoList = document.querySelector("#todo-list");
 const todoInput = document.querySelector("#todo-form input");
 
+
 function todoDel (event) {
   const li = event.target.parentElement;
   li.remove();
@@ -22,12 +23,15 @@ function TodoLi (TodoObj) {
   li.appendChild(span);
   li.appendChild(button);
   todoList.appendChild(li);
-  todoList.addEventListener("click" ,todoDel);
+  button.addEventListener("click" ,todoDel);
 }
 
 function TodoSaveLocal () {
   localStorage.setItem("todo", JSON.stringify(toDos));
 }
+
+
+const todoLocal = localStorage.getItem("todo");
 
 function handleTodoSubmit (event) {
   event.preventDefault();
@@ -43,13 +47,14 @@ function handleTodoSubmit (event) {
   
 }
 
-const todoLocal = localStorage.getItem("todo");
+
 
 if (todoLocal !== null) {
   const parsedToDos = JSON.parse(todoLocal);
   toDos = parsedToDos;
   parsedToDos.forEach(TodoLi);
 }
+
 
 function todoLoginCheck() {
   const saveUsernameChech = localStorage.getItem("user");
