@@ -94,6 +94,7 @@ h1 {
   padding: 0px;
 }
 #todo-list li {
+  color: white;
   width: 500px;
   padding: 3px;
 }
@@ -102,7 +103,8 @@ h1 {
   display: inline-block;
   width: 450px;
   font-size: 20px;
-  color: rgba(0, 0, 0, 0.9);
+  color: white;
+  opacity: 0.9;
   font-weight: 900;
   background-color: rgba(0, 0, 0, 0.4);
   padding-bottom: 5px;
@@ -123,6 +125,7 @@ h1 {
 #todo-form input:focus-visible {
   outline: 1px solid #f7e600;
 }
+
 #weather span {
   font-size: 1.2rem;
   background-color: rgba(0, 0, 0, 0.3);
@@ -131,11 +134,14 @@ h1 {
   z-index: 2;
 }
 #weather {
+  display: flex;
+  flex-direction: column;
   z-index: 2;
   position: absolute;
-  top: 300px;
+  top: 20px;
+  right: 25px;
 }
-@media (max-width: 600px) {
+@media (max-width: 1300px) {
   #quote {
     z-index: 2;
     display: inline-block;
@@ -143,5 +149,13 @@ h1 {
     top: 95%;
     width: 90vw;
     top: 80%;
+  }
+  #weather {
+    position: relative;
+    top: -110px;
+    left: 3px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }
