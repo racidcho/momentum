@@ -11,8 +11,6 @@ function onGeoOk(position) {
     const weatherDiv2 = document.querySelector("#weather span:first-child");
     const temp = data.main.temp-273.15;
     const tempFinal = temp.toFixed(1)+"도";
-    
-    
       if (data.weather[0].main == "Clouds") {
       
       weatherDiv.innerText = "현재 날씨는 흐립니다.";
@@ -22,7 +20,7 @@ function onGeoOk(position) {
   });
   }
   ff();
-  setInterval(ff, 1000);
+  setInterval(ff, 60000);
  
 }
 function onGeoError() {
