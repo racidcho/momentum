@@ -6,6 +6,8 @@ function clocks() {
     const min = String(day.getMinutes()).padStart(2, "0");
     const sec = String(day.getSeconds()).padStart(2, "0");
     clock.innerText = `${hours}:${min}:${sec}`;
+
+
 }
 clocks();
 setInterval(clocks, 1000)
