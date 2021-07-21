@@ -3,8 +3,6 @@ function onGeoOk(position) {
   const latitude  = position.coords.latitude;
   const longitude = position.coords.longitude; 
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=49c543562322d9cfbb1df84a20f24701`;
-
-        
   fetch(url).then(Response => Response.json()).then(data => {
     const day = data.weather[0].main;
     const weatherDiv = document.querySelector("#weather span:last-child");

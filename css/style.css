@@ -127,6 +127,8 @@ h1 {
 }
 
 #weather span {
+  border-radius: 5px;
+  margin-top: 2px;
   font-size: 1.2rem;
   background-color: rgba(0, 0, 0, 0.3);
 }
@@ -141,6 +143,17 @@ h1 {
   top: 20px;
   right: 25px;
 }
+.container {
+  z-index: 2;
+  overflow: hidden;
+
+  transition: all 0.5s ease-out;
+  max-height: 600px;
+}
+.section {
+  max-height: 0;
+}
+
 @media (max-width: 1300px) {
   #quote {
     z-index: 2;

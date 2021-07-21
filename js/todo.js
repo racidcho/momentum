@@ -1,14 +1,12 @@
 const todoForm = document.getElementById("todo-form");
 const todoList = document.querySelector("#todo-list");
 const todoInput = document.querySelector("#todo-form input");
-
-
+const toggleb = document.querySelector("#todo-form button");
 function todoDel (event) {
   const li = event.target.parentElement;
   li.remove();
   toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id));
   TodoSaveLocal();
- 
 }
 
 let toDos = [];
@@ -30,7 +28,6 @@ function TodoSaveLocal () {
   localStorage.setItem("todo", JSON.stringify(toDos));
 }
 
-
 const todoLocal = localStorage.getItem("todo");
 
 function handleTodoSubmit (event) {
@@ -44,10 +41,7 @@ function handleTodoSubmit (event) {
   todoInput.value = "";
   TodoLi (TodoObj);
   TodoSaveLocal ();
-  
 }
-
-
 
 if (todoLocal !== null) {
   const parsedToDos = JSON.parse(todoLocal);
@@ -55,13 +49,17 @@ if (todoLocal !== null) {
   parsedToDos.forEach(TodoLi);
 }
 
-
 function todoLoginCheck() {
   const saveUsernameChech = localStorage.getItem("user");
   if (saveUsernameChech === null) {
     alert("로그인을 먼저 해주세요.")
   }
 }
+
 todoInput.addEventListener("click" , todoLoginCheck);
 todoForm.addEventListener("submit" ,handleTodoSubmit);
-
+toggleb.addEventListener("click", function() {
+  document.querySelector(".container").classList.toggle("section")
+  const a =document.getElementsByTagName("li").length;
+  console.log(a);
+});
