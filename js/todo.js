@@ -81,4 +81,5 @@ todoInput.addEventListener("click" , todoLoginCheck);
 todoForm.addEventListener("submit" ,handleTodoSubmit);
 toggleb.addEventListener("click", function() {
   document.querySelector(".container").classList.toggle("section")
+  document.querySelector("#quote").classList.toggle("hiddenOff");
 });
