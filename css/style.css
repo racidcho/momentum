@@ -183,19 +183,22 @@ h1 {
   
   #hiddenOff {
     z-index: 2;
-  display: block;
-  position: absolute;
-  top: 45%;
-  width: 325px;
-  color:#101421;
-  background-color: #101421;
-  
-  }
-  .on {
-    background-color: white;
-    color:white;
-    transition: color 0.5s ease-in;
+   
+    display: none;
+
     
+     
+  }
+  #hiddenOn {
+    z-index: 2;
+    display: block;
+    position: absolute;
+    top: 45%;
+    width: 325px;
+    overflow: hidden;
+    animation: wipe 1s;
+    color:white;
+   
   }
   .container {
     z-index: 3;
@@ -306,6 +309,16 @@ h1 {
     opacity: 0;
   }
   to {
+    opacity: 1;
+  }
+}
+@keyframes wipe {
+  from { 
+    height:0px;
+    opacity: 0;
+  } 
+  to {
+    height: 250px;
     opacity: 1;
   }
 }

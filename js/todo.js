@@ -2,7 +2,7 @@ const todoForm = document.getElementById("todo-form");
 const todoList = document.querySelector("#todo-list");
 const todoInput = document.querySelector("#todo-form input");
 const toggleb = document.querySelector("#todo-form button");
-
+const hiddenOff = document.querySelector("#hiddenOff");
 function todoDel (event) {
   const li = event.target.parentElement;
   li.remove();
@@ -78,8 +78,17 @@ function todoLoginCheck() {
 }
 
 todoInput.addEventListener("click" , todoLoginCheck);
+// todoInput.addEventListener("submit" , )
 todoForm.addEventListener("submit" ,handleTodoSubmit);
 toggleb.addEventListener("click", function() {
   document.querySelector(".container").classList.toggle("section")
-  document.querySelector("#hiddenOff").classList.toggle("On");
+  if (hiddenOff.id == "hiddenOff") {
+    hiddenOff.id = "hiddenOn";
+  } else {
+    const hiddenOn = document.getElementById("hiddenOn");
+    hiddenOn.id = "hiddenOff";
+  }
+
+ 
+
 });

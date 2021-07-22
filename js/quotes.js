@@ -25,12 +25,20 @@ quote.innerText = todayQuote.quote;
 author.innerText = todayQuote.author;
 const width = window.innerWidth || document.body.clientWidth;
 
+function quoteR() {
+    const todayQuote2 = quotes[Math.floor(Math.random()*quotes.length)];
+    quote.innerText = todayQuote2.quote;
+    author.innerText = todayQuote2.author;
+}
+const todoInput2 = document.querySelector("#todo-form input");
+
 if(width <1300) {
 
 quoteId.id = "hiddenOff";
 const hiddenOff = quotes;
 const quote = document.querySelector("#hiddenOff span:first-child");
 const author = document.querySelector("#hiddenOff span:last-child");
-quote.innerText = todayQuote.quote;
-author.innerText = todayQuote.author;
+const quoteBtn = document.querySelector("#ToggleBtn");
+quoteBtn.addEventListener("click", quoteR);
+
 }
