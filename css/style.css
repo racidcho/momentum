@@ -91,6 +91,7 @@ h1 {
 
 #todo-list {
   z-index: 2;
+  position: relative;
   margin: 0px;
   padding: 0px;
 }
@@ -112,8 +113,9 @@ h1 {
   opacity: 0.9;
   font-weight: 900;
   background-color: rgba(0, 0, 0, 0.1);
-  padding-bottom: 5px;
-
+  background: rgba(86, 115, 234, 0.063);
+  font-size: 15px;
+  align-items: center;
   margin-right: 5px;
 }
 #todo-form input {
@@ -204,23 +206,21 @@ h1 {
   }
   #todo-list li {
     color: white;
-    width: 350px;
+    width: 320px;
     padding: 3px;
-    margin: 5px;
+    margin: 6px;
     border: 1px solid rgba(86, 115, 234, 0.733);
     background: rgba(86, 115, 234, 0.063);
     border-radius: 8px;
   }
   #todo-list span {
-    border-radius: 10px;
     display: inline-block;
-    width: 292px;
-    font-size: 20px;
-
+    width: 270px;
+    font-size: 13px;
+    background: none;
     font-weight: bold;
     color: rgb(207, 207, 207);
-    padding-bottom: 5px;
-    margin-right: 8px;
+    margin-right: px;
   }
   .bgImg {
     display: none;
@@ -245,15 +245,7 @@ h1 {
     border: 1px solid rgba(207, 207, 207, 0.25);
     box-shadow: rgb(0 0 0 / 2%) -1px 1px 1px;
   }
-  button {
-    background-color: #101421;
-  }
-  li {
-  }
-  #todo-list span {
-    background: rgba(86, 115, 234, 0.063);
-    font-size: 15px;
-  }
+
   #clearBtn {
     color: rgb(207, 207, 207);
     background-color: rgba(86, 115, 234, 0.063);
