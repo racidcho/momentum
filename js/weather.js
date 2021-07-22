@@ -8,11 +8,15 @@ function onGeoOk(position) {
     const weatherDiv = document.querySelector("#weather span:last-child");
     const weatherDiv2 = document.querySelector("#weather span:first-child");
     const temp = data.main.temp-273.15;
+    console.log(day);
     const tempFinal = temp.toFixed(1)+"도";
       if (data.weather[0].main == "Clouds") {
-      
+   
       weatherDiv.innerText = "현재 날씨는 흐립니다.";
       weatherDiv2.innerText = `현재온도는 ${tempFinal} 입니다.`;
+      const icon = document.createElement("i");
+      icon.innerHTML = "<i class="fas fa-cloud"></i>";
+    
     }
     
   });
