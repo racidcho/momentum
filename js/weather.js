@@ -14,8 +14,7 @@ function onGeoOk(position) {
    
       weatherDiv.innerText = "현재 날씨는 흐립니다.";
       weatherDiv2.innerText = `현재온도는 ${tempFinal} 입니다.`;
-      const icon = document.createElement("i");
-      icon.innerHTML = "<i class="fas fa-cloud"></i>";
+     
     
     }
     

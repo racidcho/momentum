@@ -19,8 +19,18 @@ const quotes = [
 
 const quote = document.querySelector("#quote span:first-child");
 const author = document.querySelector("#quote span:last-child");
-
+const quoteId = document.getElementById("quote");
 const todayQuote = quotes[Math.floor(Math.random()*quotes.length)];
 quote.innerText = todayQuote.quote;
 author.innerText = todayQuote.author;
+const width = window.innerWidth || document.body.clientWidth;
 
+if(width <1300) {
+
+quoteId.id = "hiddenOff";
+const hiddenOff = quotes;
+const quote = document.querySelector("#hiddenOff span:first-child");
+const author = document.querySelector("#hiddenOff span:last-child");
+quote.innerText = todayQuote.quote;
+author.innerText = todayQuote.author;
+}

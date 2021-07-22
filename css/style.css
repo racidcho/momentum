@@ -165,7 +165,7 @@ h1 {
   border: none;
 }
 .container {
-  z-index: 2;
+  z-index: 3;
   overflow: hidden;
   transition: all 0.3s ease-out;
   max-height: 275px;
@@ -180,21 +180,32 @@ h1 {
   body {
     color: rgb(207, 207, 207);
   }
-
-  #quote {
+  
+  #hiddenOff {
     z-index: 2;
-    position: absolute;
-    display: none;
-    width: 85vw;
-    top: 51%;
+  display: block;
+  position: absolute;
+  top: 45%;
+  width: 325px;
+  color:#101421;
+  background-color: #101421;
+  
   }
-
-  .hiddenOff {
-    display: none;
-    z-index: 1;
-    position: absolute;
+  .on {
+    background-color: white;
+    color:white;
+    transition: color 0.5s ease-in;
+    
   }
-
+  .container {
+    z-index: 3;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+    max-height: 275px;
+  }
+  .section {
+    max-height: 0;
+  }
   #todo-form input {
     color: white;
     background: #23304f;
