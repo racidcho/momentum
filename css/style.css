@@ -42,14 +42,15 @@ form input:first-child {
 }
 
 #clock {
-  border-radius: 25px;
+  border-radius: 15px;
+
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.1);
   padding: 0px 5px 25px 0px;
-  height: 105px;
+  height: 50px;
   color: whitesmoke;
 
-  font-size: 6em;
+  font-size: 3em;
 }
 #quote {
   z-index: 2;
@@ -97,6 +98,10 @@ h1 {
   color: white;
   width: 500px;
   padding: 3px;
+  margin: 5px;
+  border-bottom: 1px solid blanchedalmond;
+  animation: fadein 0.3s;
+  box-shadow: 0 2px 2px -2px black;
 }
 #todo-list span {
   border-radius: 10px;
@@ -106,9 +111,10 @@ h1 {
   color: white;
   opacity: 0.9;
   font-weight: 900;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.1);
   padding-bottom: 5px;
-  margin-right: 10px;
+
+  margin-right: 5px;
 }
 #todo-form input {
   border-radius: 15px;
@@ -119,16 +125,12 @@ h1 {
   text-align: center;
 }
 #todo-form span {
-  position: relative;
   background-color: tomato;
   width: 30px;
   height: 30px;
+  border-radius: 5px;
+}
 
-  border-radius: 50px;
-}
-::placeholder {
-  cololr: blue;
-}
 #login-form input:focus-visible,
 #todo-form input:focus-visible {
   outline: 1px solid #f7e600;
@@ -137,7 +139,7 @@ h1 {
 #weather span {
   border-radius: 5px;
   margin-top: 2px;
-  font-size: 1.2rem;
+  font-size: 1em;
   background-color: rgba(0, 0, 0, 0.3);
 }
 #todo-form {
@@ -153,36 +155,116 @@ h1 {
 }
 #ToggleBtn {
   margin-left: 5px;
+  background-color: whitesmoke;
+  border: none;
 }
 .container {
   z-index: 2;
   overflow: hidden;
-  transition: all 0.5s ease-out;
-  max-height: 600px;
+  transition: all 0.3s ease-out;
+  max-height: 275px;
 }
 .section {
   max-height: 0;
 }
-#todo-list li {
-  animation: fadein 0.3s;
+.bgImg {
+  animation: fadein 1s;
 }
-
 @media (max-width: 1300px) {
+  body {
+    color: rgb(207, 207, 207);
+  }
   #quote {
     z-index: 2;
-    display: inline-block;
+    display: none;
     position: absolute;
     top: 95%;
     width: 90vw;
-    top: 80%;
+    top: 81%;
+  }
+  #todo-form input {
+    color: rgb(207, 207, 207);
+    border: 1px solid rgba(207, 207, 207, 0.25);
+    box-shadow: rgb(0 0 0 / 2%) -1px 1px 1px;
+    background: rgba(86, 115, 234, 0.063);
   }
   #weather {
     position: relative;
-    top: -110px;
+    top: -120px;
     left: 3px;
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: 12px;
+  }
+  #clock {
+    font-size: 25px;
+    margin-bottom: 100px;
+    height: 10px;
+  }
+  #todo-list li {
+    color: white;
+    width: 350px;
+    padding: 3px;
+    margin: 5px;
+    border: 1px solid rgba(86, 115, 234, 0.733);
+    background: rgba(86, 115, 234, 0.063);
+    border-radius: 8px;
+  }
+  #todo-list span {
+    border-radius: 10px;
+    display: inline-block;
+    width: 292px;
+    font-size: 20px;
+
+    font-weight: bold;
+    color: rgb(207, 207, 207);
+    padding-bottom: 5px;
+    margin-right: 8px;
+  }
+  .bgImg {
+    display: none;
+  }
+  .mobileBg {
+    z-index: 1;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: #101421;
+  }
+  h1 {
+    font-size: 15px;
+  }
+  #todo-form span {
+    color: rgb(235, 83, 116);
+    background-color: rgba(235, 83, 116, 0.082);
+    width: 30px;
+
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid rgba(207, 207, 207, 0.25);
+    box-shadow: rgb(0 0 0 / 2%) -1px 1px 1px;
+  }
+  button {
+    background-color: #101421;
+  }
+  li {
+  }
+  #todo-list span {
+    background: rgba(86, 115, 234, 0.063);
+    font-size: 15px;
+  }
+  #clearBtn {
+    color: rgb(207, 207, 207);
+    background-color: rgba(86, 115, 234, 0.063);
+  }
+  #ToggleBtn {
+    background-color: rgb(207, 207, 207);
+    border-radius: 5px;
+  }
+  #login-form input:focus-visible,
+  #todo-form input:focus-visible {
+    outline: 1px solid rgb(207, 207, 207);
   }
 }
 @keyframes fadein {
