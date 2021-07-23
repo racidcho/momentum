@@ -5,6 +5,16 @@ const toggleb = document.querySelector("#todo-form button");
 const hiddenOff = document.querySelector("#hiddenOff");
 function todoDel (event) {
   const li = event.target.parentElement;
+  console.log(li);
+  li.classList.toggle("liTransition");
+  // function syncDelay(milliseconds){
+  //   var start = new Date().getTime();
+  //   var end=0;
+  //   while( (end-start) < milliseconds){
+  //       end = new Date().getTime();
+  //   }
+  //  }
+  //  syncDelay(5000);
   li.remove();
   const todospan = document.querySelector("#todo-form span");
   const a =document.getElementsByTagName("li").length;
@@ -88,7 +98,4 @@ toggleb.addEventListener("click", function() {
     const hiddenOn = document.getElementById("hiddenOn");
     hiddenOn.id = "hiddenOff";
   }
-
- 
-
 });
