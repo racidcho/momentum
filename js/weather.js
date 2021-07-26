@@ -16,7 +16,7 @@ function onGeoOk(position) {
       weatherDiv2.innerText = `현재온도는 ${tempFinal} 입니다.`;
     }
     else {
-      weatherDiv.innerText = data.weather[0].main;
+      weatherDiv.innerText = `현재 날씨는 ${data.weather[0].main}입니다.;
       weatherDiv2.innerText = `현재온도는 ${tempFinal} 입니다.`;
     }
     
