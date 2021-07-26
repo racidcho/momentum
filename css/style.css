@@ -116,8 +116,8 @@ h1 {
   height: 28px;
   color: white;
   opacity: 0.9;
-  font-weight: 500;
-  background-color: #23304f;
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.2);
   font-size: 18px;
   align-items: center;
   margin-right: 5px;
@@ -168,7 +168,7 @@ h1 {
   z-index: 3;
   overflow: hidden;
   transition: all 0.3s ease-out;
-  max-height: 275px;
+  max-height: 285px;
 }
 .section {
   max-height: 0;
@@ -176,6 +176,11 @@ h1 {
 .bgImg {
   animation: fadein 1s;
 }
+.liTransition {
+  animation: fadeout 1s;
+}
+
+  /* 모바일 */
 @media (max-width: 1300px) {
   body {
     color: rgb(207, 207, 207);
@@ -183,17 +188,14 @@ h1 {
   
   #hiddenOff {
     z-index: 2;
-   
     display: none;
-
-    
-     
   }
+
   #hiddenOn {
     z-index: 2;
     display: block;
     position: absolute;
-    top: 27%;
+    top: 40%;
     width: 325px;
     overflow: hidden;
     animation: wipe 1s;
@@ -310,6 +312,15 @@ h1 {
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 @keyframes wipe {
