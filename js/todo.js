@@ -18,7 +18,8 @@ function todoDel (event) {
   //  }
   //  syncDelay(5000);
   li.remove();
-
+  var audio = new Audio('2.m4a');
+  audio.play();
   const ddd = document.getElementsByClassName('todoNumber');
   //console.log("길이 : "+ ddd.length);
   for (var i=0; i<ddd.length;i++) {
