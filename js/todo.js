@@ -3,9 +3,11 @@ const todoList = document.querySelector("#todo-list");
 const todoInput = document.querySelector("#todo-form input");
 const toggleb = document.querySelector("#todo-form button");
 const hiddenOff = document.querySelector("#hiddenOff");
+
+//리스트 삭제
 function todoDel (event) {
   const li = event.target.parentElement;
-  console.log(li);
+  
   li.classList.toggle("liTransition");
   // function syncDelay(milliseconds){
   //   var start = new Date().getTime();
@@ -16,7 +18,15 @@ function todoDel (event) {
   //  }
   //  syncDelay(5000);
   li.remove();
-  const todospan = document.querySelector("#todo-form span");
+
+  const ddd = document.getElementsByClassName('todoNumber');
+  //console.log("길이 : "+ ddd.length);
+  for (var i=0; i<ddd.length;i++) {
+    ddd[i].innerText = i+1;
+  }
+
+  const todospan = document.getElementById('todonum');
+
   const a =document.getElementsByTagName("li").length;
   if (a !== 0) {
     todospan.innerText = `할 일 ${a}개 남음`;
@@ -31,17 +41,23 @@ let toDos = [];
 
 function TodoLi (TodoObj) {
   const li = document.createElement("li");
-  const span = document.createElement("span");
+  const span1 = document.createElement("span");
+  const span2 = document.createElement("span");
   const button = document.createElement("button");
   li.id = TodoObj.id;
-  
-  span.innerText = TodoObj.text;
+ 
+  var bb =document.getElementsByTagName("li").length;
+  var bb = bb+1;
+    span1.innerText = bb;
+    span2.innerText = TodoObj.text;
   button.innerText = "❌";
-  li.appendChild(span);
+  li.appendChild(span1);
+  li.appendChild(span2);
   li.appendChild(button);
   todoList.appendChild(li);
+  span1.className = "todoNumber"
   const a =document.getElementsByTagName("li").length;
-  const todospan = document.querySelector("#todo-form span");
+  const todospan = document.getElementById('todonum');
   if (a !== 0) {
   todospan.innerText = `할 일 ${a}개 남음`;
   } else {

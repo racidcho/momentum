@@ -1,59 +1,59 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-    <style> 
-        ul,
-        li,
-        button {
-            list-style: none;
-        }
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <style>
+      ul,
+      li,
+      button {
+        list-style: none;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <form id="login-form">
-        <input type="text" required placeholder="아이디를 입력해주세요">
-        <input type="submit" value="Login">
+      <input type="text" required placeholder="아이디를 입력해주세요" />
+      <input type="submit" value="Login" />
     </form>
-    
+
     <h1 id="name" class="hidden"></h1>
     <button id="clearBtn" class="hidden">Log out</button>
     <h2 id="clock"></h2>
     <form id="todo-form">
-        
-        <input type="text" placeholder="할 일을 입력해주세요." required>
-        <span></span>
-        <button id="ToggleBtn" type="button"><i class="fas fa-bars"></i></button>
+      <input type="text" placeholder="할 일을 입력해주세요." required />
+
+      <span id="todonum"></span>
+      <button id="ToggleBtn" type="button"><i class="fas fa-bars"></i></button>
     </form>
     <div id="weather">
-        <span></span>
-        <span></span>
+      <span></span>
+      <span></span>
     </div>
-    
+
     <div class="container">
-        <ul id="todo-list"></ul>
+      <ul id="todo-list"></ul>
     </div>
-   
+
     <div id="quote">
-        <span>
-        </span>
-        <span>
-        </span>
+      <span> </span>
+      <span> </span>
     </div>
-    
-    
+
     <script src="js/welcome.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
-    
-</body>
+  </body>
 </html>

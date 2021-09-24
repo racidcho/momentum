@@ -102,18 +102,25 @@ h1 {
 }
 #todo-list li {
   color: white;
-  width: 500px;
+  width: 475px;
   padding: 3px;
   margin: 5px;
   border-bottom: 1px solid blanchedalmond;
   animation: fadein 0.3s;
   box-shadow: 0 2px 2px -2px black;
 }
+.todoNumber {
+  width:30px !important;
+  height: 28px;
+  color: black !important;
+
+}
 #todo-list span {
   border-radius: 10px;
   display: inline-block;
-  width: 450px;
+  width: 400px;
   height: 28px;
+
   color: white;
   opacity: 0.9;
   font-weight: 600;
@@ -248,18 +255,7 @@ h1 {
     height: 25px;
     border-radius: 10px;
   }
-  #todo-list span {
-    height: 23px;
-    font-weight: 300;
-    align-items: center;
-    margin-right: 5px;
-
-    width: 270px;
-    font-size: 13px;
-    background: none;
-    font-weight: bold;
-    color: rgb(207, 207, 207);
-  }
+ 
   #login-form input:first-child {
     border: none;
     height: 25px;
