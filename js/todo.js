@@ -19,6 +19,7 @@ function todoDel (event) {
   //  syncDelay(5000);
   li.remove();
   var audio = new Audio('2.m4a');
+ // audio.volume = 0.1;
   audio.play();
   const ddd = document.getElementsByClassName('todoNumber');
   //console.log("길이 : "+ ddd.length);
@@ -56,6 +57,9 @@ function TodoLi (TodoObj) {
   li.appendChild(span2);
   li.appendChild(button);
   todoList.appendChild(li);
+  var audio = new Audio('1.mp3');
+ audio.volume = 0.5;
+  audio.play();
   span1.className = "todoNumber"
   const a =document.getElementsByTagName("li").length;
   const todospan = document.getElementById('todonum');
